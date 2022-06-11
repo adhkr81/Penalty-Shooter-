@@ -1,5 +1,55 @@
 
 * {
     background-color: rgb(141, 102, 102);
-    color: azure;
+    color: azure; 
+}
+
+.container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.gameGrid {
+    display: grid;
+    grid-template-columns: 80px 80px 80px;
+    grid-template-rows: 50px 50px;
+    column-gap: 2px;
+    row-gap: 2px;  
+
+
+    
+    padding: 2px;
+}
+
+.grid1 {
+    text-align: center;
+    background-color: green;
+}
+
+.grid2 {
+    text-align: center;
+    background-color: green;
+}
+
+.grid3 {
+    text-align: center;
+    background-color: green;
+} 
+
+.grid4 {
+    text-align: center;
+    background-color: green;
+}
+
+.grid5 {
+    text-align: center;
+    background-color: green;
+}
+
+.grid6 {
+    text-align: center;
+    background-color: green;
 }
