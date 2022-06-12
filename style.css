@@ -10,46 +10,62 @@
     justify-content: center;
 }
 
+.backgroundImageInvisible {
+    opacity: 0%;
+}
 
+.backgroundImage {
+
+    height: 200px;
+    width: 300px;
+    background-image: url(./assets/images/Milan\ Stadium.png);  
+    background-size: 350%;
+    background-position: center; 
+    background-position-y: -35px;
+    
+}
 
 .gameGrid {
+    margin-top: 43px;
+    margin-left: 89px;
+    margin-right: 100px;
     display: grid;
-    grid-template-columns: 80px 80px 80px;
-    grid-template-rows: 50px 50px;
+    grid-template-columns: 40px 38px 40px;
+    grid-template-rows: 28px 28px;
     column-gap: 2px;
-    row-gap: 2px;  
-
-
+    row-gap: 2px;
+    opacity: 40%;
     
-    padding: 2px;
+
 }
 
 .grid1 {
     text-align: center;
-    background-color: green;
+    background-color: crimson;
+
 }
 
 .grid2 {
     text-align: center;
-    background-color: green;
+    background-color: crimson;
 }
 
 .grid3 {
     text-align: center;
-    background-color: green;
+    background-color: crimson;
 } 
 
 .grid4 {
     text-align: center;
-    background-color: green;
+    background-color: crimson;
 }
 
 .grid5 {
     text-align: center;
-    background-color: green;
+    background-color: crimson;
 }
 
 .grid6 {
     text-align: center;
-    background-color: green;
+    background-color: crimson;
 }
