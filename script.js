@@ -21,16 +21,26 @@ startBtn.addEventListener("click", () => {
 		let zoneBtn = document.getElementById(i + 1);
 		zoneBtn.addEventListener("click", (e) => {
 			game.kicks(e);
-			if (game.roundsCounter % 2 === 0) {
+			if (game.roundsCounter % 2 === 0 && game.roundsCounter <= 5) {
 				player.setAttribute("class", "playerRound1")
 				computer.setAttribute("class", "computerRound1")
-			} else {
+			} else if (game.roundsCounter % 2 !== 0 && game.roundsCounter <= 5) {
 				player.setAttribute("class", "playerRound2")
 				computer.setAttribute("class", "computerRound2")
+				// FASE 2
+			} else if (game.roundsCounter % 2 === 0 && game.roundsCounter === 6) {
+				player.setAttribute("class", "playerRound1")
+				computer.setAttribute("class", "computerRound1")
+				backgroundImg.setAttribute("class", "backgroundImageStage2")
+			}else if (game.roundsCounter % 2 !== 0 && game.roundsCounter === 6) {
+				player.setAttribute("class", "playerRound2")
+				computer.setAttribute("class", "computerRound2")
+				backgroundImg.setAttribute("class", "backgroundImageStage2")
 			}
-		
 		});
 	}
+
+
 
 	console.log(
 		`Esses sao os pulos do pre-definidos do goleiro ${game.goalKeeperJump}`

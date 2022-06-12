@@ -41,6 +41,15 @@
 	background-position-y: -140px;
 }
 
+.backgroundImageStage2 {
+	height: 480px;
+	width: 800px;
+	background-image: url(./assets/images/Rainbow\ Stadium.png);
+	background-size: 330%;
+	background-position: center;
+	background-position-y: -140px;
+}
+
 .gameGrid {
 	position: relative;
 	top: -210px;

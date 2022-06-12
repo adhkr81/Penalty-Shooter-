@@ -28,12 +28,37 @@ class Game {
 		}
 	}
 
+
 	kicks(e) {
 		this.kick = Number(e.currentTarget.id);
 		this.roundsCounter = this.roundsCounter + 1;
  
 		this.kickCompare();
 	}
+
+	winnerResult () {
+		this.playerTotal = this.playerScoreArray.reduce((a, b) => a + b, 0)
+		this.computerTotal = this.computerScoreArray.reduce((c, d) => c + d, 0)
+
+		if (this.playerTotal > this.computerTotal) {
+			console.log("PLAYER WON!!!")
+			
+
+			//FASE 2
+		} else if (this.playerTotal === this.computerTotal) {
+			console.log("EMPATOU")
+			this.roundsCounter = 0
+			//RESTART
+
+		} else {
+			console.log("COMPUTER WON!!!")
+
+			//GAME OVER
+		}
+
+	}
+
+
 
 
 	kickCompare(index) {
@@ -133,18 +158,25 @@ class Game {
 			if (this.kick !== this.goalKeeperJump[9]) {
 				console.log(`ROUND ${this.roundsCounter} - GOOOOOOOOOOOL ! Jogador chutou em ${this.kick} e Computador pulou em ${9}`);
 				this.computerScoreArray.push(true)
+				
 
-				console.log(this.playerScoreArray)
-				console.log(this.computerScoreArray)
-
+				console.log(`PLAYER SCORE - ${this.playerScoreArray}`)
+				console.log(`COMPUTER SCORE - ${this.computerScoreArray}`)
+				this.winnerResult()
 
 			} else {
 				console.log(`ROUND ${this.roundsCounter} - DEFEEESAAAA !`);
 				this.computerScoreArray.push(false)
+				
 
-				console.log(`PLAYER SCORE${this.playerScoreArray}`)
-				console.log(`COMPUTER SCORE${this.computerScoreArray}`)
+				console.log(`PLAYER SCORE - ${this.playerScoreArray}`)
+				console.log(`COMPUTER SCORE - ${this.computerScoreArray}`)
+				this.winnerResult()
 			}
 		}
+
 	}
+
+
+
 }
