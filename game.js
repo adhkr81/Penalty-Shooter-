@@ -10,7 +10,7 @@ class Game {
 	createGoalZones() {
 		for (let i = 0; i < 6; i++) {
 			this.goalZones = document.createElement("div");
-			this.goalZones.setAttribute("class", `grid${i + 1}`);
+			this.goalZones.setAttribute("class", "grid1");
 			this.goalZones.setAttribute("id", i + 1);
 			this.goalZones.innerText = i + 1;
 			this.screen.appendChild(this.goalZones);
@@ -39,8 +39,10 @@ class Game {
 		if (this.roundsCounter === 1) {
 			if (this.kick !== this.goalKeeperJump[0]) {
 				console.log("GOOOOOOOOOOOL !");
+				// game.message.innerText = "GOOOOOOOOOOOL !"  COMO REFERENCIA ALGO FORA NO SCRIPT.JS???
 			} else {
 				console.log("DEFEEESAAAA !");
+				// game.message.innerText = "DEFEEESAAAA !"
 			}
 		}
 

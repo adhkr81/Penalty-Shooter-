@@ -1,71 +1,107 @@
-
 * {
-    background-color: rgb(141, 102, 102);
-    color: azure; 
+	background-color: rgb(141, 102, 102);
+	color: azure;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 500;
 }
 
 .container {
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
+	margin-top: 100px;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 100px;
 }
 
 .backgroundImageInvisible {
-    opacity: 0%;
+	opacity: 0%;
+}
+
+.playerInvisible {
+	opacity: 0%;
+}
+
+.ballInvisible {
+	opacity: 0%;
+}
+
+.goalkeeperInvisible {
+	opacity: 0%;
+}
+
+.scoreInvisible {
+	opacity: 0%;
 }
 
 .backgroundImage {
-
-    height: 200px;
-    width: 300px;
-    background-image: url(./assets/images/Milan\ Stadium.png);  
-    background-size: 350%;
-    background-position: center; 
-    background-position-y: -35px;
-    
+	height: 480px;
+	width: 800px;
+	background-image: url(./assets/images/Milan\ Stadium.png);
+	background-size: 330%;
+	background-position: center;
+	background-position-y: -140px;
 }
 
 .gameGrid {
-    margin-top: 43px;
-    margin-left: 89px;
-    margin-right: 100px;
-    display: grid;
-    grid-template-columns: 40px 38px 40px;
-    grid-template-rows: 28px 28px;
-    column-gap: 2px;
-    row-gap: 2px;
-    opacity: 40%;
-    
+	position: relative;
+	top: -210px;
+	margin-right: 244px;
+	margin-left: 244px;
+	display: grid;
+	grid-template-columns: 100px 100px 100px;
+	grid-template-rows: 70px 70px;
+	column-gap: 6px;
+	row-gap: 6px;
+	background-color: white;
+	opacity: 30%;
+}
 
+div:hover.grid1 {
+	background-color: gray;
 }
 
 .grid1 {
-    text-align: center;
-    background-color: crimson;
-
+	text-align: center;
+	background-color: white;
 }
 
-.grid2 {
-    text-align: center;
-    background-color: crimson;
+.ball {
+	width: 30px;
+	height: 30px;
+	background-color: fuchsia;
+	position: relative;
+	top: 200px;
+	left: 390px;
 }
 
-.grid3 {
-    text-align: center;
-    background-color: crimson;
-} 
-
-.grid4 {
-    text-align: center;
-    background-color: crimson;
+.player {
+	width: 45px;
+	height: 100px;
+	background-color: red;
+	position: relative;
+	top: 340px;
+	left: 330px;
 }
 
-.grid5 {
-    text-align: center;
-    background-color: crimson;
+.goalkeeper {
+	width: 45px;
+	height: 100px;
+	background-color: mediumblue;
+	position: relative;
+	top: 2px;
+	left: 380px;
+	font-size: small;
 }
 
-.grid6 {
-    text-align: center;
-    background-color: crimson;
+.message {
+	position: relative;
+	top: 155px;
+	left: 20px;
+	background: none;
+}
+
+.score {
+	position: relative;
+	top: 160px;
+	left: 20px;
+	background: none;
 }

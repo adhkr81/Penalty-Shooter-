@@ -1,6 +1,7 @@
 gameGrid = document.querySelector(".gameGrid");
 startBtn = document.querySelector("button");
-backgroundImg = document.querySelector("div");
+backgroundImg = document.querySelector("section");
+message = document.getElementById("message");
 
 // console.log(startBtn);
 // console.log(gameGrid);
@@ -11,6 +12,7 @@ startBtn.addEventListener("click", () => {
 	game.createGoalZones(); //CRIA DIVS E APPEND
 	game.goalKeeperLevel1(); //GOLEIRO RANDOM
 	backgroundImg.setAttribute("class", "backgroundImage");
+
 
 	for (let i = 0; i < game.zonesIdArray.length; i++) {
 		//LOOP COLOCAR EVENT NO BOTAO
