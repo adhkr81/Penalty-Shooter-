@@ -41,7 +41,25 @@
 	background-position-y: -140px;
 }
 
-.backgroundImageStage2 {
+.backgroundImageLevel2 {
+	height: 480px;
+	width: 800px;
+	background-image: url(./assets/images/Tokyo\ Stadium.png);
+	background-size: 330%;
+	background-position: center;
+	background-position-y: -140px;
+}
+
+.backgroundImageLevel3 {
+	height: 480px;
+	width: 800px;
+	background-image: url(./assets/images/Snowman\ Stadium.png);
+	background-size: 330%;
+	background-position: center;
+	background-position-y: -140px;
+}
+
+.backgroundImageLevel4 {
 	height: 480px;
 	width: 800px;
 	background-image: url(./assets/images/Rainbow\ Stadium.png);
