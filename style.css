@@ -16,19 +16,7 @@
 	opacity: 0%;
 }
 
-.playerInvisible {
-	opacity: 0%;
-}
-
-.ballInvisible {
-	opacity: 0%;
-}
-
-.computerInvisible {
-	opacity: 0%;
-}
-
-.scoreInvisible {
+.invisible {
 	opacity: 0%;
 }
 
@@ -70,7 +58,7 @@
 
 .gameGrid {
 	position: relative;
-	top: -210px;
+	top: -250px;
 	margin-right: 244px;
 	margin-left: 244px;
 	display: grid;
@@ -100,42 +88,54 @@ div:hover.grid1 {
 	left: 390px;
 }
 
+
 .playerRound1 {
+	background: none;
+	position: relative;
 	width: 45px;
 	height: 100px;
-	background-color: red;
-	position: relative;
 	top: 340px;
 	left: 330px;
+	background-image: url(./assets/images/player1.png);
+	background-size: 120%
 }
 
 .playerRound2 {
+	background: none;
 	width: 45px;
 	height: 100px;
-	background-color: mediumblue;
 	position: relative;
 	top: 340px;
 	left: 330px;
+	background-image: url(./assets/images/comp1.png);
+	background-size: 120%;
 }
 
 .computerRound1 {
+	background: none;
 	width: 45px;
 	height: 100px;
-	background-color: mediumblue;
 	position: relative;
-	top: 2px;
+	top: 25px;
 	left: 380px;
-	font-size: small;
+	background-image: url(./assets/images/comp3.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+
+	animation: goalkeeperPosition1;
+	animation-duration: 2;
 }
 
 .computerRound2 {
+	background: none;
 	width: 45px;
 	height: 100px;
-	background-color: red;
 	position: relative;
-	top: 2px;
+	top: 25px;
 	left: 380px;
-	font-size: small;
+	background-image: url(./assets/images/player3.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
 }
 
 .message {
@@ -151,3 +151,73 @@ div:hover.grid1 {
 	left: 20px;
 	background: none;
 }
+
+.next {
+	width: 115px;
+	height: 100px;
+	background-color:darkorange;
+	position: relative;
+	top: -50px;
+	left: 340px;
+	font-size: small;
+	/* background: none; */
+}
+
+.gameButton {
+	position: relative;
+	top: -20px;
+	left: 285px;
+	color: #FFF;
+	border: 2px solid rgb(216, 2, 134);
+	border-radius: 0px;
+	padding: 18px 36px;
+	display: inline-block;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 14px;
+	letter-spacing: 1px;
+	cursor: pointer;
+	box-shadow: inset 0 0 0 0 #D80286;
+	-webkit-transition: ease-out 0.4s;
+	-moz-transition: ease-out 0.4s;
+	transition: ease-out 0.4s;
+  }
+
+  .slide_right:hover {
+	box-shadow: inset 400px 0 0 0 #D80286;
+  }
+
+  .start_button {
+	position: relative;
+	top: 100px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	color: #FFF;
+	border: 2px solid rgb(216, 2, 134);
+	border-radius: 0px;
+	padding: 18px 36px;
+
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 14px;
+	letter-spacing: 1px;
+	cursor: pointer;
+	box-shadow: inset 0 0 0 0 #D80286;
+	-webkit-transition: ease-out 0.4s;
+	-moz-transition: ease-out 0.4s;
+	transition: ease-out 0.4s;
+  }
+
+
+
+
+  @keyframes goalkeeperPosition1 {
+	from {
+	  transform: translateX(0);
+	  transform: translateY(0);
+	}
+  
+	to {
+	  transform: translateX(-40px);
+	  transform: translatey(-20px);
+	}
+  }

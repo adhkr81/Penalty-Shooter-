@@ -7,6 +7,8 @@ class Game {
 		this.roundsCounter = 0;
 		this.playerScoreArray = [];
 		this.computerScoreArray = [];
+		this.level = 1;
+		this.status = ""
 	}
 
 	createGoalZones() {
@@ -30,7 +32,8 @@ class Game {
 
 	kicks(e) {
 		this.kick = Number(e.currentTarget.id);
-		this.roundsCounter = this.roundsCounter + 1;
+		this.roundsCounter = this.roundsCounter + 1
+		this.parent = e.currentTarget.parentElement;
 
 		this.kickCompare(this.roundsCounter);
 	}
@@ -38,55 +41,31 @@ class Game {
 	kickCompare(round) {
 		if (round === 10) {
 			if (this.kick !== this.goalKeeperJump[round - 1]) {
-				console.log(
-					`ROUND ${this.roundsCounter} - GOOOOOOOOOOOL ! Jogador chutou em ${
-						this.kick
-					} e Computador pulou em ${
-						this.goalKeeperJump[this.roundsCounter - 1]
-					}`
-				);
-				this.playerScoreArray.push(true);
+				console.log(`ROUND ${this.roundsCounter} - GOOOOOOOOOOOL ! Jogador chutou em ${this.kick} e Computador pulou em ${this.goalKeeperJump[this.roundsCounter - 1]}`);
+				this.computerScoreArray.push(true);
 
 				console.log(`PLAYER SCORE - ${this.playerScoreArray}`);
 				console.log(`COMPUTER SCORE - ${this.computerScoreArray}`);
 				this.winnerResult();
 			} else {
 				console.log(`ROUND ${this.roundsCounter} - DEFEEESAAAA !`);
-				this.playerScoreArray.push(false);
+				this.computerScoreArray.push(false);
 				console.log(`PLAYER SCORE - ${this.playerScoreArray}`);
 				console.log(`COMPUTER SCORE - ${this.computerScoreArray}`);
 				this.winnerResult();
 			}
-		} else if (
-			this.kick !== this.goalKeeperJump[round - 1] &&
-			round % 2 !== 0
-		) {
-			console.log(
-				`ROUND ${this.roundsCounter} - GOOOOOOOOOOOL ! Jogador chutou em ${
-					this.kick
-				} e Computador pulou em ${this.goalKeeperJump[this.roundsCounter - 1]}`
-			);
+			//ROUND IMPAR
+		} else if (this.kick !== this.goalKeeperJump[round - 1] && round % 2 !== 0) {
+			console.log(`ROUND ${this.roundsCounter} - GOOOOOOOOOOOL ! Jogador chutou em ${this.kick} e Computador pulou em ${this.goalKeeperJump[this.roundsCounter - 1]}`);
 			this.playerScoreArray.push(true);
-		} else if (
-			this.kick === this.goalKeeperJump[round - 1] &&
-			round % 2 !== 0
-		) {
+		} else if (this.kick === this.goalKeeperJump[round - 1] && round % 2 !== 0) {
 			console.log(`ROUND ${this.roundsCounter} - DEFEEESAAAA !`);
 			this.playerScoreArray.push(false);
-		} else if (
-			this.kick !== this.goalKeeperJump[round - 1] &&
-			round % 2 === 0
-		) {
-			console.log(
-				`ROUND ${this.roundsCounter} - GOOOOOOOOOOOL ! COMPUTADOR chutou em ${
-					this.goalKeeperJump[this.roundsCounter - 1]
-				} e Jogador pulou em ${this.kick}`
-			);
+			//ROUND PAR
+		} else if (this.kick !== this.goalKeeperJump[round - 1] && round % 2 === 0) {
+			console.log(`ROUND ${this.roundsCounter} - GOOOOOOOOOOOL ! COMPUTADOR chutou em ${this.goalKeeperJump[this.roundsCounter - 1]} e Jogador pulou em ${this.kick}`);
 			this.computerScoreArray.push(true);
-		} else if (
-			this.kick === this.goalKeeperJump[round - 1] &&
-			round % 2 === 0
-		) {
+		} else if (this.kick === this.goalKeeperJump[round - 1] && round % 2 === 0) {
 			console.log(`ROUND ${this.roundsCounter} - DEFEEESAAAA !`);
 			this.computerScoreArray.push(false);
 		}
@@ -100,21 +79,30 @@ class Game {
 			this.playerScoreArray = [];
 			this.computerScoreArray = [];
 			console.log("PLAYER WON!!!");
-
-			//FASE 2
+			this.level = 2;
+			this.status = "nextlevel"
+			this.removeAllChild(this.parent);
 		} else if (this.playerTotal === this.computerTotal) {
 			this.playerScoreArray = [];
 			this.computerScoreArray = [];
 			console.log("EMPATOU");
-			this.roundsCounter = 0;
-			//RESTART
+			this.roundsCounter = 9;
+			this.status = "tie";
 		} else {
 			console.log("COMPUTER WON!!!");
+			this.removeAllChild(this.parent);
+			this.status = "computerwon";
+		}
+	}
 
-			//GAME OVER
+	removeAllChild(parent) {
+		while (parent.firstChild) {
+			parent.removeChild(parent.firstChild);
 		}
 	}
 }
+
+
 
 // ************************************ TENTATIVA REFATORAR KICKCOMPARE ***************************
 
