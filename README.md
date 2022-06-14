@@ -25,6 +25,7 @@ The main challenge with this assignment was creating and changing HTML structure
 Jogo simples desenvolvido em Javascript Vanilla, HTML e CSS, com a maioria da funcionalidade básica dedicada no arquivo game.js, manipulação de DOM estão em script.js, e estilos e animações estão em styles.css
 
 [Deployed link](https://adhkr81.github.io/Penalty-Shooter-/)
+
 Este projeto é parte do Bootcamp de Desenvolvimento WEB da Ironhack. Para nosso primeiro projeto independente, foi nos dado a tarefa de criar nosso próprio jogo autoral usando o conhecimento adquirido durante as duas primeiras semanas do curso.
 
 O principal desafio deste trabalho foi criar e mudar a estrutura do HTML a partir do arquivo principal game.js criando classes e métodos de Javascript, para modificar as classes de CSS dependendo das diferentes condições do jogo.
