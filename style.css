@@ -29,33 +29,6 @@
 	background-position-y: -140px;
 }
 
-/* .backgroundImageLevel2 {
-	height: 480px;
-	width: 800px;
-	background-image: url(./assets/images/Tokyo\ Stadium.png);
-	background-size: 330%;
-	background-position: center;
-	background-position-y: -140px;
-}
-
-.backgroundImageLevel3 {
-	height: 480px;
-	width: 800px;
-	background-image: url(./assets/images/Snowman\ Stadium.png);
-	background-size: 330%;
-	background-position: center;
-	background-position-y: -140px;
-}
-
-.backgroundImageLevel4 {
-	height: 480px;
-	width: 800px;
-	background-image: url(./assets/images/Rainbow\ Stadium.png);
-	background-size: 330%;
-	background-position: center;
-	background-position-y: -140px;
-} */
-
 .gameGrid {
 	position: relative;
 	top: -212px;
@@ -78,15 +51,6 @@ div:hover.grid1 {
 .grid1 {
 	text-align: center;
 	background-color: white;
-}
-
-.ball {
-	width: 30px;
-	height: 30px;
-	background-color: fuchsia;
-	position: relative;
-	top: 200px;
-	left: 390px;
 }
 
 .message {
@@ -506,4 +470,169 @@ div:hover.grid1 {
 	background-image: url(./assets/images/player3.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
+}
+
+/* ------------------------- ball original --------------------------------------------------- */
+
+.ball_original {
+	width: 30px;
+	height: 30px;
+	background-image: url(./assets/images/ball.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+	position: relative;
+	top: 200px;
+	left: 390px;
+}
+
+.ball_1 {
+	animation-name: ballPosition1;
+	animation-duration: 1s;
+	width: 30px;
+	height: 30px;
+	background-image: url(./assets/images/ball.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+	position: relative;
+	top: 200px;
+	left: 390px;
+}
+
+.ball_2 {
+	animation-name: ballPosition2;
+	animation-duration: 1s;
+	width: 30px;
+	height: 30px;
+	background-image: url(./assets/images/ball.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+	position: relative;
+	top: 200px;
+	left: 390px;
+}
+
+.ball_3 {
+	animation-name: ballPosition3;
+	animation-duration: 1s;
+	width: 30px;
+	height: 30px;
+	background-image: url(./assets/images/ball.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+	position: relative;
+	top: 200px;
+	left: 390px;
+}
+
+.ball_4 {
+	animation-name: ballPosition4;
+	animation-duration: 1s;
+	width: 30px;
+	height: 30px;
+	background-image: url(./assets/images/ball.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+	position: relative;
+	top: 200px;
+	left: 390px;
+}
+
+.ball_5 {
+	animation-name: ballPosition5;
+	animation-duration: 1s;
+	width: 30px;
+	height: 30px;
+	background-image: url(./assets/images/ball.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+	position: relative;
+	top: 200px;
+	left: 390px;
+}
+
+.ball_6 {
+	animation-name: ballPosition6;
+	animation-duration: 1s;
+	width: 30px;
+	height: 30px;
+	background-image: url(./assets/images/ball.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+	position: relative;
+	top: 200px;
+	left: 390px;
+}
+
+/* ------------------------------ ball animations ----------------------------------------- */
+
+@keyframes ballPosition1 {
+	0% {
+		top: 290px;
+		left: 390px;
+	}
+
+	100% {
+		top: -130px;
+		left: 270px;
+	}
+}
+
+@keyframes ballPosition2 {
+	0% {
+		top: 290px;
+		left: 390px;
+	}
+
+	100% {
+		top: -130px;
+		left: 390px;
+	}
+}
+
+@keyframes ballPosition3 {
+	0% {
+		top: 290px;
+		left: 390px;
+	}
+
+	100% {
+		top: -130px;
+		left: 490px;
+	}
+}
+
+@keyframes ballPosition4 {
+	0% {
+		top: 290px;
+		left: 390px;
+	}
+
+	100% {
+		top: -50px;
+		left: 270px;
+	}
+}
+
+@keyframes ballPosition5 {
+	0% {
+		top: 290px;
+		left: 390px;
+	}
+
+	100% {
+		top: -50px;
+		left: 390px;
+	}
+}
+
+@keyframes ballPosition6 {
+	0% {
+		top: 290px;
+		left: 390px;
+	}
+
+	100% {
+		top: -50px;
+		left: 490px;
+	}
 }

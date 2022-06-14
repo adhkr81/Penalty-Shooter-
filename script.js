@@ -34,7 +34,8 @@ startBtn.addEventListener("click", () => {
 			gameGrid.setAttribute("class", "gameGrid");
 			kicker.setAttribute("class", "yellow_kick_original");
 			goalkeeper.setAttribute("class", "red_goalkeeper_original");
-		}, 1000);
+			ball.setAttribute("class", "ball_original")
+		}, 1500);
 	}
 
 	function timeout2() {
@@ -43,7 +44,8 @@ startBtn.addEventListener("click", () => {
 			gameGrid.setAttribute("class", "gameGrid");
 			kicker.setAttribute("class", "red_kick_original");
 			goalkeeper.setAttribute("class", "yellow_goalkeeper_original");
-		}, 1000);
+			ball.setAttribute("class", "ball_original")
+		}, 1500);
 	}
 
 	function gameBtns() {
@@ -61,7 +63,7 @@ startBtn.addEventListener("click", () => {
 			setTimeout(() => {
 				message.innerText = "GAME OVER COMPUTADOR VENCEU";
 				gameGrid.setAttribute("class", "invisible");
-			}, 1000);
+			}, 1500);
 		}
 	}
 
@@ -71,10 +73,14 @@ startBtn.addEventListener("click", () => {
 
 		if (game.roundsCounter % 2 !== 0) {
 			goalkeeper.setAttribute("class", `red_goalkeeper_${jump}`);
+			kicker.setAttribute("class", "yellow_kick_1")
+			ball.setAttribute("class", `ball_${clickNumber}`)
 		}
 
 		if (game.roundsCounter % 2 === 0) {
 			goalkeeper.setAttribute("class", `yellow_goalkeeper_${clickNumber}`);
+			kicker.setAttribute("class", "red_kick_1")
+			ball.setAttribute("class", `ball_${jump}` )
 		}
 	}
 
@@ -91,48 +97,3 @@ startBtn.addEventListener("click", () => {
 	console.log(`Esses sao os pulos do pre-definidos do goleiro ${game.goalKeeperJump}`);
 });
 
-// function animations () {
-
-// 	if	(goalKeeperJump[game.roundsCounter - 1] === 1) {
-
-// 	} else if (goalKeeperJump[game.roundsCounter - 1] === 2) {
-
-// 	} else if (goalKeeperJump[game.roundsCounter - 1] === 3) {
-
-// 	} else if (goalKeeperJump[game.roundsCounter - 1] === 4) {
-
-// 	} else if (goalKeeperJump[game.roundsCounter - 1] === 5) {
-
-// 	} else if (goalKeeperJump[game.roundsCounter - 1] === 6) {
-
-// 	}
-// 	}
-// }
-
-// FASE 2
-// } else if (game.roundsCounter % 2 === 0 && game.roundsCounter < 21) {
-// 	player.setAttribute("class", "playerRound1");
-// 	computer.setAttribute("class", "computerRound1");
-// 	backgroundImg.setAttribute("class", "backgroundImageLevel2");
-// } else if (game.roundsCounter % 2 !== 0 && game.roundsCounter < 21) {
-// 	player.setAttribute("class", "playerRound2");
-// 	computer.setAttribute("class", "computerRound2");
-// 	backgroundImg.setAttribute("class", "backgroundImageLevel2");
-// 	// FASE 3
-// } else if (game.roundsCounter % 2 === 0 && game.roundsCounter < 31) {
-// 	player.setAttribute("class", "playerRound1");
-// 	computer.setAttribute("class", "computerRound1");
-// 	backgroundImg.setAttribute("class", "backgroundImageLevel3");
-// } else if (game.roundsCounter % 2 !== 0 && game.roundsCounter < 31) {
-// 	player.setAttribute("class", "playerRound2");
-// 	computer.setAttribute("class", "computerRound2");
-// 	backgroundImg.setAttribute("class", "backgroundImageLevel3");
-// 	// FASE 4
-// } else if (game.roundsCounter % 2 === 0 && game.roundsCounter < 41) {
-// 	player.setAttribute("class", "playerRound1");
-// 	computer.setAttribute("class", "computerRound1");
-// 	backgroundImg.setAttribute("class", "backgroundImageLevel4");
-// } else if (game.roundsCounter % 2 !== 0 && game.roundsCounter < 41) {
-// 	player.setAttribute("class", "playerRound2");
-// 	computer.setAttribute("class", "computerRound2");
-// 	backgroundImg.setAttribute("class", "backgroundImageLevel4");
