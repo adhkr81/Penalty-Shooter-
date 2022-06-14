@@ -1,10 +1,15 @@
 * {
-	background-color: rgb(141, 102, 102);
+	background: #141E30;  /* fallback for old browsers */
+	background-color: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+
+
 	color: azure;
 	font-family: VT323;
 	font-weight: 500;
 	font-size: 27.5px;
 }
+
+
 
 .container {
 	margin-top: 100px;
@@ -524,6 +529,7 @@ div:hover.grid1 {
 	position: relative;
 	top: 200px;
 	left: 390px;
+	border-radius: 50%;
 }
 
 .ball_1 {
@@ -537,6 +543,7 @@ div:hover.grid1 {
 	position: relative;
 	top: 200px;
 	left: 390px;
+	border-radius: 50%;
 }
 
 .ball_2 {
@@ -550,6 +557,7 @@ div:hover.grid1 {
 	position: relative;
 	top: 200px;
 	left: 390px;
+	border-radius: 50%;
 }
 
 .ball_3 {
@@ -563,6 +571,7 @@ div:hover.grid1 {
 	position: relative;
 	top: 200px;
 	left: 390px;
+	border-radius: 50%;
 }
 
 .ball_4 {
@@ -576,6 +585,7 @@ div:hover.grid1 {
 	position: relative;
 	top: 200px;
 	left: 390px;
+	border-radius: 50%;
 }
 
 .ball_5 {
@@ -589,6 +599,7 @@ div:hover.grid1 {
 	position: relative;
 	top: 200px;
 	left: 390px;
+	border-radius: 50%;
 }
 
 .ball_6 {
@@ -602,6 +613,7 @@ div:hover.grid1 {
 	position: relative;
 	top: 200px;
 	left: 390px;
+	border-radius: 50%;
 }
 
 /* ------------------------------ ball animations ----------------------------------------- */
