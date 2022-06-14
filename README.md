@@ -29,7 +29,7 @@ Este projeto é parte do Bootcamp de Desenvolvimento WEB da Ironhack. Para nosso
 
 O principal desafio deste trabalho foi criar e mudar a estrutura do HTML a partir do arquivo principal game.js criando classes e métodos de Javascript, para modificar as classes de CSS dependendo das diferentes condições do jogo.
 
-### fonte das imagens
+### Fonte das imagens
 
 - Background art from "Super Goal! 2" (SNES) [link](https://spritedatabase.net/game/3029)
 - Characters sprites from "Ronaldinho Street Soccer 2007" (Mobile) [link](https://spritedatabase.net/game/1373)
