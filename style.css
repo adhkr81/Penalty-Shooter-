@@ -1,15 +1,12 @@
 * {
-	background: #141E30;  /* fallback for old browsers */
-	background-color: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-
+	background: #141e30; /* fallback for old browsers */
+	background-color: -webkit-linear-gradient(to right, #243b55, #141e30); /* Chrome 10-25, Safari 5.1-6 */
 
 	color: azure;
 	font-family: VT323;
 	font-weight: 500;
 	font-size: 27.5px;
 }
-
-
 
 .container {
 	margin-top: 100px;
@@ -57,6 +54,8 @@ div:hover.grid1 {
 .grid1 {
 	text-align: center;
 	background-color: white;
+	font-size: 1.3em;
+	font-weight: 200;
 }
 
 .message {
