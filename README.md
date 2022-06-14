@@ -1,6 +1,6 @@
 ## Penalty Shooter Game 
 
-Simple game developed in Vanilla Javascript, HTML and CSS, with most of the basic functionality dedicated in game.js file, DOM manipulation are in script.js, and style and animations are in styles.css.
+Simple game developed in Vanilla Javascript, HTML and CSS, with most of the basic functionality dedicated in the game.js file, DOM manipulation are in the script.js, and style and animations can be found in styles.css.
 
 [Deployed link](https://adhkr81.github.io/Penalty-Shooter-/)
 
