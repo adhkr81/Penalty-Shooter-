@@ -5,10 +5,12 @@ class Game {
 		this.goalKeeperJump = [];
 		this.zonesIdArray = [];
 		this.roundsCounter = 0;
-		this.playerScoreArray = [];
-		this.computerScoreArray = [];
+		this.playerScoreArray = []; // para somatoria do reduce
+		this.computerScoreArray = []; // para somatoria do reduce
+
 		this.level = 1;
-		this.status = ""
+		this.status = "";
+		this.message = "";
 	}
 
 	createGoalZones() {
@@ -32,7 +34,7 @@ class Game {
 
 	kicks(e) {
 		this.kick = Number(e.currentTarget.id);
-		this.roundsCounter = this.roundsCounter + 1
+		this.roundsCounter = this.roundsCounter + 1;
 		this.parent = e.currentTarget.parentElement;
 
 		this.kickCompare(this.roundsCounter);
@@ -41,32 +43,34 @@ class Game {
 	kickCompare(round) {
 		if (round === 10) {
 			if (this.kick !== this.goalKeeperJump[round - 1]) {
-				console.log(`ROUND ${this.roundsCounter} - GOOOOOOOOOOOL ! Jogador chutou em ${this.kick} e Computador pulou em ${this.goalKeeperJump[this.roundsCounter - 1]}`);
+				this.message = `ROUND ${this.roundsCounter} - GOOOOOOOOOOOL ! Jogador chutou no ${this.kick} e Computador pulou no ${this.goalKeeperJump[this.roundsCounter - 1]}`;
 				this.computerScoreArray.push(true);
 
 				console.log(`PLAYER SCORE - ${this.playerScoreArray}`);
 				console.log(`COMPUTER SCORE - ${this.computerScoreArray}`);
 				this.winnerResult();
 			} else {
-				console.log(`ROUND ${this.roundsCounter} - DEFEEESAAAA !`);
+				this.message = `ROUND ${this.roundsCounter} - DEFEEESAAAA !`;
 				this.computerScoreArray.push(false);
+
 				console.log(`PLAYER SCORE - ${this.playerScoreArray}`);
 				console.log(`COMPUTER SCORE - ${this.computerScoreArray}`);
 				this.winnerResult();
 			}
 			//ROUND IMPAR
 		} else if (this.kick !== this.goalKeeperJump[round - 1] && round % 2 !== 0) {
-			console.log(`ROUND ${this.roundsCounter} - GOOOOOOOOOOOL ! Jogador chutou em ${this.kick} e Computador pulou em ${this.goalKeeperJump[this.roundsCounter - 1]}`);
+			this.message = `ROUND ${this.roundsCounter} - GOOOOOOOOOOOL ! Jogador chutou no ${this.kick} e Computador pulou no ${this.goalKeeperJump[this.roundsCounter - 1]}`;
 			this.playerScoreArray.push(true);
 		} else if (this.kick === this.goalKeeperJump[round - 1] && round % 2 !== 0) {
-			console.log(`ROUND ${this.roundsCounter} - DEFEEESAAAA !`);
+			this.message = `ROUND ${this.roundsCounter} - DEFEEESAAAA !`;
 			this.playerScoreArray.push(false);
+
 			//ROUND PAR
 		} else if (this.kick !== this.goalKeeperJump[round - 1] && round % 2 === 0) {
-			console.log(`ROUND ${this.roundsCounter} - GOOOOOOOOOOOL ! COMPUTADOR chutou em ${this.goalKeeperJump[this.roundsCounter - 1]} e Jogador pulou em ${this.kick}`);
+			this.message = `ROUND ${this.roundsCounter} - GOOOOOOOOOOOL ! COMPUTADOR chutou no ${this.goalKeeperJump[this.roundsCounter - 1]} e Jogador pulou no ${this.kick}`;
 			this.computerScoreArray.push(true);
 		} else if (this.kick === this.goalKeeperJump[round - 1] && round % 2 === 0) {
-			console.log(`ROUND ${this.roundsCounter} - DEFEEESAAAA !`);
+			this.message = `ROUND ${this.roundsCounter} - DEFEEESAAAA !`;
 			this.computerScoreArray.push(false);
 		}
 	}
@@ -80,13 +84,11 @@ class Game {
 			this.computerScoreArray = [];
 			console.log("PLAYER WON!!!");
 			this.level = 2;
-			this.status = "nextlevel"
+			this.status = "nextlevel";
 			this.removeAllChild(this.parent);
 		} else if (this.playerTotal === this.computerTotal) {
-			this.playerScoreArray = [];
-			this.computerScoreArray = [];
 			console.log("EMPATOU");
-			this.roundsCounter = 9;
+			this.roundsCounter = 8;
 			this.status = "tie";
 		} else {
 			console.log("COMPUTER WON!!!");
@@ -97,12 +99,12 @@ class Game {
 
 	removeAllChild(parent) {
 		while (parent.firstChild) {
-			parent.removeChild(parent.firstChild);
+			parent.removeChild(parent.firstChild);		
 		}
+		this.parent.remove()
+
 	}
 }
-
-
 
 // ************************************ TENTATIVA REFATORAR KICKCOMPARE ***************************
 

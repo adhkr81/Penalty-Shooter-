@@ -1,10 +1,12 @@
-gameGrid = document.querySelector(".gameGrid");
-startBtn = document.querySelector("button");
-backgroundImg = document.querySelector("section");
-message = document.getElementById("message");
-computer = document.getElementById("computer");
-player = document.getElementById("player");
-gameBtn = document.getElementById("gameBtn");
+let gameGrid = document.querySelector(".gameGrid");
+let startBtn = document.querySelector("button");
+let backgroundImg = document.querySelector("section");
+
+let message = document.getElementById("message");
+
+let computer = document.getElementById("computer");
+let player = document.getElementById("player");
+let gameBtn = document.getElementById("gameBtn");
 
 startBtn.addEventListener("click", () => {
 	let game = new Game(gameGrid);
@@ -19,34 +21,61 @@ startBtn.addEventListener("click", () => {
 		let zoneBtn = document.getElementById(i + 1);
 		zoneBtn.addEventListener("click", (e) => {
 			game.kicks(e);
+			//animations()
 			changeUniform();
+			checkStatus();
 			gameBtns();
 		});
 	}
 
-	function timeout() {
+	function timeout1() {
 		gameGrid.setAttribute("class", "invisible");
 		setTimeout(() => {
-			gameGrid.setAttribute("class", "gameGrid");
-		}, 2000);
+			gameGrid.setAttribute("class", "gameGrid")
+			player.setAttribute("class", "playerRound1");
+			computer.setAttribute("class", "computerRound1");;
+		}, 1000);
+	}
+
+	function timeout2() {
+		gameGrid.setAttribute("class", "invisible");
+		setTimeout(() => {
+			gameGrid.setAttribute("class", "gameGrid")
+			player.setAttribute("class", "playerRound2");
+			computer.setAttribute("class", "computerRound2");
+		}, 1000);
 	}
 
 	function gameBtns() {
 		if (game.status === "nextlevel") {
+			gameGrid.setAttribute("class", "invisible")
 			gameBtn.setAttribute("class", "gameButton slide_right");
-			gameGrid.setAttribute("class", "invisible");
-		}
+			message.innerText = "O JOGADOR VENCEU A PARTIDA, AVANCE PARA A PROXIMA FASE"			
+		}	
 	}
+
+
+	function checkStatus() {
+		if (game.status === "tie") {
+		message.innerText = "EMPATE, jogue mais uma rodada!"
+	} else if (game.status === "computerwon") {
+		setTimeout( () => {
+		message.innerText = "GAME OVER COMPUTADOR VENCEU"
+		gameGrid.setAttribute("class", "invisible")}, 1000);
+	}
+}
 
 	function changeUniform() {
 		if (game.roundsCounter % 2 === 0 && game.roundsCounter < 11) {
-			player.setAttribute("class", "playerRound1");
-			computer.setAttribute("class", "computerRound1");
-			timeout();
+			message.innerText = game.message
+			timeout1();
+
+			
 		} else if (game.roundsCounter % 2 !== 0 && game.roundsCounter < 11) {
-			player.setAttribute("class", "playerRound2");
-			computer.setAttribute("class", "computerRound2");
-			timeout();
+			message.innerText = game.message
+			timeout2();
+
+			
 			// FASE 2
 		} else if (game.roundsCounter % 2 === 0 && game.roundsCounter < 21) {
 			player.setAttribute("class", "playerRound1");
