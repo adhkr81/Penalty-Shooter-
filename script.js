@@ -3,6 +3,8 @@ let startBtn = document.querySelector("button");
 let backgroundImg = document.querySelector("section");
 
 let message = document.getElementById("message");
+let printComputer = document.getElementById("printComputer");
+let printPlayer = document.getElementById("printPlayer");
 
 let kicker = document.getElementById("kicker");
 let goalkeeper = document.getElementById("goalkeeper");
@@ -21,10 +23,10 @@ startBtn.addEventListener("click", () => {
 		let zoneBtn = document.getElementById(i + 1);
 		zoneBtn.addEventListener("click", (e) => {
 			game.kicks(e);
+			printScore();
 			goalkeeperAnimations();
 			changeUniform();
 			checkStatus();
-			gameBtns();
 		});
 	}
 
@@ -34,8 +36,8 @@ startBtn.addEventListener("click", () => {
 			gameGrid.setAttribute("class", "gameGrid");
 			kicker.setAttribute("class", "yellow_kick_original");
 			goalkeeper.setAttribute("class", "red_goalkeeper_original");
-			ball.setAttribute("class", "ball_original")
-		}, 1500);
+			ball.setAttribute("class", "ball_original");
+		}, 1100);
 	}
 
 	function timeout2() {
@@ -44,26 +46,34 @@ startBtn.addEventListener("click", () => {
 			gameGrid.setAttribute("class", "gameGrid");
 			kicker.setAttribute("class", "red_kick_original");
 			goalkeeper.setAttribute("class", "yellow_goalkeeper_original");
-			ball.setAttribute("class", "ball_original")
-		}, 1500);
+			ball.setAttribute("class", "ball_original");
+		}, 1100);
 	}
 
-	function gameBtns() {
-		if (game.status === "nextlevel") {
-			gameGrid.setAttribute("class", "invisible");
-			gameBtn.setAttribute("class", "gameButton slide_right");
-			message.innerText = "O JOGADOR VENCEU A PARTIDA, AVANCE PARA A PROXIMA FASE";
-		}
-	}
 
 	function checkStatus() {
 		if (game.status === "tie") {
-			message.innerText = "EMPATE, jogue mais uma rodada!";
+			message.innerText = "IT'S A TIE, PLAY ANOTHER ROUND";
 		} else if (game.status === "computerwon") {
 			setTimeout(() => {
-				message.innerText = "GAME OVER COMPUTADOR VENCEU";
 				gameGrid.setAttribute("class", "invisible");
-			}, 1500);
+				gameBtn.setAttribute("class", "gameButton slide_right");
+				gameBtn.innerText = "GAME OVER COMPUTER WON";
+			}, 1700);
+		} else if (game.status === "nextlevel") {
+			gameGrid.setAttribute("class", "invisible");
+			gameBtn.setAttribute("class", "gameButton2 slide_right");
+			gameBtn.innerText = "YOU WON! PLAY NEXT STAGE";
+		}
+	}
+
+	function printScore() {
+		if (game.roundsCounter === 1) {
+			printComputer.innerText = "-";
+			printPlayer.innerText = game.scorePrintPlayer.join(" ");
+		} else {
+			printComputer.innerText = game.scorePrintComputer.join(" ");
+			printPlayer.innerText = game.scorePrintPlayer.join(" ");
 		}
 	}
 
@@ -73,14 +83,14 @@ startBtn.addEventListener("click", () => {
 
 		if (game.roundsCounter % 2 !== 0) {
 			goalkeeper.setAttribute("class", `red_goalkeeper_${jump}`);
-			kicker.setAttribute("class", "yellow_kick_1")
-			ball.setAttribute("class", `ball_${clickNumber}`)
+			kicker.setAttribute("class", "yellow_kick_1");
+			ball.setAttribute("class", `ball_${clickNumber}`);
 		}
 
 		if (game.roundsCounter % 2 === 0) {
 			goalkeeper.setAttribute("class", `yellow_goalkeeper_${clickNumber}`);
-			kicker.setAttribute("class", "red_kick_1")
-			ball.setAttribute("class", `ball_${jump}` )
+			kicker.setAttribute("class", "red_kick_1");
+			ball.setAttribute("class", `ball_${jump}`);
 		}
 	}
 
@@ -96,4 +106,3 @@ startBtn.addEventListener("click", () => {
 
 	console.log(`Esses sao os pulos do pre-definidos do goleiro ${game.goalKeeperJump}`);
 });
-

@@ -6,37 +6,31 @@
 		<meta name="viewport" content="width=P, initial-scale=1.0" />
 
 		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323" />
+
 		<title>Penalty Game</title>
 	</head>
 
 	<body>
-
-
 		<button class="start_button slide_right">START</button>
 
-
 		<main class="container">
-			
+			<section class="invisible">
+				<div id="kicker" class="yellow_kick_original"></div>
+				<div id="goalkeeper" class="red_goalkeeper_original"></div>
+				<div id="ball" class="ball_original"></div>
 
+				<div id="message" class="message">MESSAGE</div>
+				<div class="display1">PLAYER: </div>
+				<div class="display2">COMPUTER: </div>
+				<div id="printPlayer" class="printPlayer">-</div>
+				<div id="printComputer" class="printComputer">-</div>
 
-		<section class="invisible">		
-			<div id="kicker" class="yellow_kick_original"></div>
-			<div id="goalkeeper" class="red_goalkeeper_original"></div>
-			<div id="ball" class="ball_original"></div>
+				<div id="gameBtn" class="invisible">CONGRATULATIONS YOU WON</div>
 
-			
-			<div id="message" class="message">MESSAGE</div>
-			<div id="printPlayer" class="printPlayer"></div>
-			<div id="printComputer" class="printComputer"></div>
-			<div id="gameBtn" class="invisible">GO TO NEXT LEVEL:</div>
-
-
-
-			<grid class="gameGrid">
-
-			</grid>
-		</section>
-	</main>
+				<grid class="gameGrid"> </grid>
+			</section>
+		</main>
 
 		<script src="./game.js"></script>
 		<script src="./script.js"></script>

@@ -1,8 +1,9 @@
 * {
 	background-color: rgb(141, 102, 102);
 	color: azure;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-family: VT323;
 	font-weight: 500;
+	font-size: 27.5px;
 }
 
 .container {
@@ -31,7 +32,7 @@
 
 .gameGrid {
 	position: relative;
-	top: -212px;
+	top: -342px;
 	margin-right: 244px;
 	margin-left: 244px;
 	display: grid;
@@ -60,17 +61,33 @@ div:hover.grid1 {
 	background: none;
 }
 
+.display1 {
+	position: relative;
+	top: -240px;
+	left: 20px;
+	background-color: BLACK;
+	width: 210px;
+}
+
+.display2 {
+	position: relative;
+	top: -225px;
+	left: 20px;
+	background-color: BLACK;
+	width: 210px;
+}
+
 .printPlayer {
 	position: relative;
-	top: 140px;
-	left: 20px;
+	top: -296px;
+	left: 120px;
 	background: none;
 }
 
 .printComputer {
 	position: relative;
-	top: 140px;
-	left: 20px;
+	top: -281px;
+	left: 120px;
 	background: none;
 }
 
@@ -87,15 +104,30 @@ div:hover.grid1 {
 
 .gameButton {
 	position: relative;
-	top: -60px;
-	left: 285px;
+	top: -150px;
+	left: 230px;
 	color: #fff;
 	border: 2px solid rgb(216, 2, 134);
 	border-radius: 0px;
 	padding: 18px 36px;
 	display: inline-block;
-	font-family: "Lucida Console", Monaco, monospace;
-	font-size: 14px;
+	letter-spacing: 1px;
+	cursor: pointer;
+	box-shadow: inset 0 0 0 0 #d80286;
+	-webkit-transition: ease-out 0.4s;
+	-moz-transition: ease-out 0.4s;
+	transition: ease-out 0.4s;
+}
+
+.gameButton2 {
+	position: relative;
+	top: -150px;
+	left: 219px;
+	color: #fff;
+	border: 2px solid rgb(216, 2, 134);
+	border-radius: 0px;
+	padding: 18px 36px;
+	display: inline-block;
 	letter-spacing: 1px;
 	cursor: pointer;
 	box-shadow: inset 0 0 0 0 #d80286;
@@ -118,9 +150,6 @@ div:hover.grid1 {
 	border: 2px solid rgb(216, 2, 134);
 	border-radius: 0px;
 	padding: 18px 36px;
-
-	font-family: "Lucida Console", Monaco, monospace;
-	font-size: 14px;
 	letter-spacing: 1px;
 	cursor: pointer;
 	box-shadow: inset 0 0 0 0 #d80286;
@@ -190,21 +219,25 @@ div:hover.grid1 {
 	0% {
 		top: 0px;
 		left: 350px;
+		transform: rotate(0deg);
 	}
 
 	100% {
 		top: -40px;
 		left: 250px;
+		transform: rotate(-45deg);
 	}
 }
 
 @keyframes goalkeeperPosition2 {
 	0% {
 		top: 0px;
+		transform: rotate(0deg);
 	}
 
 	100% {
 		top: -40px;
+		transform: rotate(-40deg);
 	}
 }
 
@@ -212,41 +245,49 @@ div:hover.grid1 {
 	0% {
 		top: 0px;
 		left: 380px;
+		transform: rotate(0deg);
 	}
 
 	100% {
 		top: -40px;
 		left: 480px;
+		transform: rotate(75deg);
 	}
 }
 
 @keyframes goalkeeperPosition4 {
 	0% {
 		left: 350px;
+		transform: rotate(0deg);
 	}
 
 	100% {
 		left: 260px;
+		transform: rotate(-75deg);
 	}
 }
 
 @keyframes goalkeeperPosition5 {
 	0% {
 		top: 25px;
+		transform: rotate(0deg);
 	}
 
 	100% {
-		top: 10px;
+		top: 20px;
+		transform: rotate(12deg);
 	}
 }
 
 @keyframes goalkeeperPosition6 {
 	0% {
 		left: 380px;
+		transform: rotate(0deg);
 	}
 
 	100% {
 		left: 480px;
+		transform: rotate(75deg);
 	}
 }
 
@@ -572,8 +613,8 @@ div:hover.grid1 {
 	}
 
 	100% {
-		top: -130px;
-		left: 270px;
+		top: -110px;
+		left: 260px;
 	}
 }
 
@@ -584,7 +625,7 @@ div:hover.grid1 {
 	}
 
 	100% {
-		top: -130px;
+		top: -10px;
 		left: 390px;
 	}
 }
@@ -596,7 +637,7 @@ div:hover.grid1 {
 	}
 
 	100% {
-		top: -130px;
+		top: -110px;
 		left: 490px;
 	}
 }
