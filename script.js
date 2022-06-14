@@ -4,8 +4,8 @@ let backgroundImg = document.querySelector("section");
 
 let message = document.getElementById("message");
 
-let computer = document.getElementById("computer");
-let player = document.getElementById("player");
+let kicker = document.getElementById("kicker");
+let goalkeeper = document.getElementById("goalkeeper");
 let gameBtn = document.getElementById("gameBtn");
 
 startBtn.addEventListener("click", () => {
@@ -21,7 +21,7 @@ startBtn.addEventListener("click", () => {
 		let zoneBtn = document.getElementById(i + 1);
 		zoneBtn.addEventListener("click", (e) => {
 			game.kicks(e);
-			//animations()
+			goalkeeperAnimations();
 			changeUniform();
 			checkStatus();
 			gameBtns();
@@ -31,78 +31,60 @@ startBtn.addEventListener("click", () => {
 	function timeout1() {
 		gameGrid.setAttribute("class", "invisible");
 		setTimeout(() => {
-			gameGrid.setAttribute("class", "gameGrid")
-			player.setAttribute("class", "playerRound1");
-			computer.setAttribute("class", "computerRound1");;
+			gameGrid.setAttribute("class", "gameGrid");
+			kicker.setAttribute("class", "yellow_kick_original");
+			goalkeeper.setAttribute("class", "red_goalkeeper_original");
 		}, 1000);
 	}
 
 	function timeout2() {
 		gameGrid.setAttribute("class", "invisible");
 		setTimeout(() => {
-			gameGrid.setAttribute("class", "gameGrid")
-			player.setAttribute("class", "playerRound2");
-			computer.setAttribute("class", "computerRound2");
+			gameGrid.setAttribute("class", "gameGrid");
+			kicker.setAttribute("class", "red_kick_original");
+			goalkeeper.setAttribute("class", "yellow_goalkeeper_original");
 		}, 1000);
 	}
 
 	function gameBtns() {
 		if (game.status === "nextlevel") {
-			gameGrid.setAttribute("class", "invisible")
+			gameGrid.setAttribute("class", "invisible");
 			gameBtn.setAttribute("class", "gameButton slide_right");
-			message.innerText = "O JOGADOR VENCEU A PARTIDA, AVANCE PARA A PROXIMA FASE"			
-		}	
+			message.innerText = "O JOGADOR VENCEU A PARTIDA, AVANCE PARA A PROXIMA FASE";
+		}
 	}
-
 
 	function checkStatus() {
 		if (game.status === "tie") {
-		message.innerText = "EMPATE, jogue mais uma rodada!"
-	} else if (game.status === "computerwon") {
-		setTimeout( () => {
-		message.innerText = "GAME OVER COMPUTADOR VENCEU"
-		gameGrid.setAttribute("class", "invisible")}, 1000);
+			message.innerText = "EMPATE, jogue mais uma rodada!";
+		} else if (game.status === "computerwon") {
+			setTimeout(() => {
+				message.innerText = "GAME OVER COMPUTADOR VENCEU";
+				gameGrid.setAttribute("class", "invisible");
+			}, 1000);
+		}
 	}
-}
+
+	function goalkeeperAnimations() {
+		let jump = game.goalKeeperJump[game.roundsCounter - 1];
+		let clickNumber = game.kick;
+
+		if (game.roundsCounter % 2 !== 0) {
+			goalkeeper.setAttribute("class", `red_goalkeeper_${jump}`);
+		}
+
+		if (game.roundsCounter % 2 === 0) {
+			goalkeeper.setAttribute("class", `yellow_goalkeeper_${clickNumber}`);
+		}
+	}
 
 	function changeUniform() {
 		if (game.roundsCounter % 2 === 0 && game.roundsCounter < 11) {
-			message.innerText = game.message
+			message.innerText = game.message;
 			timeout1();
-
-			
 		} else if (game.roundsCounter % 2 !== 0 && game.roundsCounter < 11) {
-			message.innerText = game.message
+			message.innerText = game.message;
 			timeout2();
-
-			
-			// FASE 2
-		} else if (game.roundsCounter % 2 === 0 && game.roundsCounter < 21) {
-			player.setAttribute("class", "playerRound1");
-			computer.setAttribute("class", "computerRound1");
-			backgroundImg.setAttribute("class", "backgroundImageLevel2");
-		} else if (game.roundsCounter % 2 !== 0 && game.roundsCounter < 21) {
-			player.setAttribute("class", "playerRound2");
-			computer.setAttribute("class", "computerRound2");
-			backgroundImg.setAttribute("class", "backgroundImageLevel2");
-			// FASE 3
-		} else if (game.roundsCounter % 2 === 0 && game.roundsCounter < 31) {
-			player.setAttribute("class", "playerRound1");
-			computer.setAttribute("class", "computerRound1");
-			backgroundImg.setAttribute("class", "backgroundImageLevel3");
-		} else if (game.roundsCounter % 2 !== 0 && game.roundsCounter < 31) {
-			player.setAttribute("class", "playerRound2");
-			computer.setAttribute("class", "computerRound2");
-			backgroundImg.setAttribute("class", "backgroundImageLevel3");
-			// FASE 4
-		} else if (game.roundsCounter % 2 === 0 && game.roundsCounter < 41) {
-			player.setAttribute("class", "playerRound1");
-			computer.setAttribute("class", "computerRound1");
-			backgroundImg.setAttribute("class", "backgroundImageLevel4");
-		} else if (game.roundsCounter % 2 !== 0 && game.roundsCounter < 41) {
-			player.setAttribute("class", "playerRound2");
-			computer.setAttribute("class", "computerRound2");
-			backgroundImg.setAttribute("class", "backgroundImageLevel4");
 		}
 	}
 
@@ -126,3 +108,31 @@ startBtn.addEventListener("click", () => {
 // 	}
 // 	}
 // }
+
+// FASE 2
+// } else if (game.roundsCounter % 2 === 0 && game.roundsCounter < 21) {
+// 	player.setAttribute("class", "playerRound1");
+// 	computer.setAttribute("class", "computerRound1");
+// 	backgroundImg.setAttribute("class", "backgroundImageLevel2");
+// } else if (game.roundsCounter % 2 !== 0 && game.roundsCounter < 21) {
+// 	player.setAttribute("class", "playerRound2");
+// 	computer.setAttribute("class", "computerRound2");
+// 	backgroundImg.setAttribute("class", "backgroundImageLevel2");
+// 	// FASE 3
+// } else if (game.roundsCounter % 2 === 0 && game.roundsCounter < 31) {
+// 	player.setAttribute("class", "playerRound1");
+// 	computer.setAttribute("class", "computerRound1");
+// 	backgroundImg.setAttribute("class", "backgroundImageLevel3");
+// } else if (game.roundsCounter % 2 !== 0 && game.roundsCounter < 31) {
+// 	player.setAttribute("class", "playerRound2");
+// 	computer.setAttribute("class", "computerRound2");
+// 	backgroundImg.setAttribute("class", "backgroundImageLevel3");
+// 	// FASE 4
+// } else if (game.roundsCounter % 2 === 0 && game.roundsCounter < 41) {
+// 	player.setAttribute("class", "playerRound1");
+// 	computer.setAttribute("class", "computerRound1");
+// 	backgroundImg.setAttribute("class", "backgroundImageLevel4");
+// } else if (game.roundsCounter % 2 !== 0 && game.roundsCounter < 41) {
+// 	player.setAttribute("class", "playerRound2");
+// 	computer.setAttribute("class", "computerRound2");
+// 	backgroundImg.setAttribute("class", "backgroundImageLevel4");

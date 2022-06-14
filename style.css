@@ -29,7 +29,7 @@
 	background-position-y: -140px;
 }
 
-.backgroundImageLevel2 {
+/* .backgroundImageLevel2 {
 	height: 480px;
 	width: 800px;
 	background-image: url(./assets/images/Tokyo\ Stadium.png);
@@ -54,7 +54,7 @@
 	background-size: 330%;
 	background-position: center;
 	background-position-y: -140px;
-}
+} */
 
 .gameGrid {
 	position: relative;
@@ -165,8 +165,11 @@ div:hover.grid1 {
 	transition: ease-out 0.4s;
 }
 
+/* ----------------------------------- PLAYERS AND ANIMATIONS -------------------------------------- */
+/* ---------------------------------------originals ---------------------------------------- */
+
 /* jogador amarelo */
-.playerRound1 {
+.yellow_kick_original {
 	background: none;
 	position: relative;
 	width: 45px;
@@ -178,7 +181,7 @@ div:hover.grid1 {
 }
 
 /* jogador vermelho */
-.playerRound2 {
+.red_kick_original {
 	background: none;
 	width: 45px;
 	height: 100px;
@@ -190,10 +193,7 @@ div:hover.grid1 {
 }
 
 /* goleiro vermelho */
-.computerRound1 {
-	animation-name: goalkeeperPosition6;
-	animation-duration: 1s;
-
+.red_goalkeeper_original {
 	background: none;
 	width: 45px;
 	height: 100px;
@@ -207,10 +207,7 @@ div:hover.grid1 {
 }
 
 /* goleiro amarelo */
-.computerRound2 {
-	animation-name: goalkeeperPosition6;
-	animation-duration: 1s;
-
+.yellow_goalkeeper_original {
 	background: none;
 	width: 45px;
 	height: 100px;
@@ -222,6 +219,8 @@ div:hover.grid1 {
 	background-size: 102%;
 	background-repeat: no-repeat;
 }
+
+/*  ----------------------------------- goalkeeper animations KEYFRAMES ------------------------------- */
 
 @keyframes goalkeeperPosition1 {
 	0% {
@@ -285,4 +284,226 @@ div:hover.grid1 {
 	100% {
 		left: 480px;
 	}
+}
+
+/*  -------------------------------- kicker animation CLASS ------------------------------------- */
+
+/* jogador amarelo */
+.yellow_kick_1 {
+	background: none;
+	position: relative;
+	width: 45px;
+	height: 100px;
+	top: 340px;
+	left: 350px;
+	background-image: url(./assets/images/player2.png);
+	background-size: 120%;
+}
+
+/* jogador vermelho */
+.red_kick_1 {
+	background: none;
+	width: 45px;
+	height: 100px;
+	position: relative;
+	top: 340px;
+	left: 350px;
+	background-image: url(./assets/images/comp2.png);
+	background-size: 120%;
+}
+
+/*  -------------------------------- goalkeeper animation CLASS ------------------------------------- */
+
+/* goleiro vermelho */
+.red_goalkeeper_1 {
+	animation-name: goalkeeperPosition1;
+	animation-duration: 1s;
+
+	background: none;
+	width: 45px;
+	height: 100px;
+	position: relative;
+	top: 25px;
+	left: 380px;
+	right: 380px;
+	background-image: url(./assets/images/comp3.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+}
+
+.red_goalkeeper_2 {
+	animation-name: goalkeeperPosition2;
+	animation-duration: 1s;
+
+	background: none;
+	width: 45px;
+	height: 100px;
+	position: relative;
+	top: 25px;
+	left: 380px;
+	right: 380px;
+	background-image: url(./assets/images/comp3.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+}
+
+.red_goalkeeper_3 {
+	animation-name: goalkeeperPosition3;
+	animation-duration: 1s;
+
+	background: none;
+	width: 45px;
+	height: 100px;
+	position: relative;
+	top: 25px;
+	left: 380px;
+	right: 380px;
+	background-image: url(./assets/images/comp3.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+}
+
+.red_goalkeeper_4 {
+	animation-name: goalkeeperPosition4;
+	animation-duration: 1s;
+
+	background: none;
+	width: 45px;
+	height: 100px;
+	position: relative;
+	top: 25px;
+	left: 380px;
+	right: 380px;
+	background-image: url(./assets/images/comp3.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+}
+
+.red_goalkeeper_5 {
+	animation-name: goalkeeperPosition5;
+	animation-duration: 1s;
+
+	background: none;
+	width: 45px;
+	height: 100px;
+	position: relative;
+	top: 25px;
+	left: 380px;
+	right: 380px;
+	background-image: url(./assets/images/comp3.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+}
+
+.red_goalkeeper_6 {
+	animation-name: goalkeeperPosition6;
+	animation-duration: 1s;
+
+	background: none;
+	width: 45px;
+	height: 100px;
+	position: relative;
+	top: 25px;
+	left: 380px;
+	right: 380px;
+	background-image: url(./assets/images/comp3.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+}
+
+/* goleiro amarelo */
+.yellow_goalkeeper_1 {
+	animation-name: goalkeeperPosition1;
+	animation-duration: 1s;
+
+	background: none;
+	width: 45px;
+	height: 100px;
+	position: relative;
+	top: 25px;
+	left: 380px;
+	right: 380px;
+	background-image: url(./assets/images/player3.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+}
+
+.yellow_goalkeeper_2 {
+	animation-name: goalkeeperPosition2;
+	animation-duration: 1s;
+
+	background: none;
+	width: 45px;
+	height: 100px;
+	position: relative;
+	top: 25px;
+	left: 380px;
+	right: 380px;
+	background-image: url(./assets/images/player3.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+}
+
+.yellow_goalkeeper_3 {
+	animation-name: goalkeeperPosition3;
+	animation-duration: 1s;
+
+	background: none;
+	width: 45px;
+	height: 100px;
+	position: relative;
+	top: 25px;
+	left: 380px;
+	right: 380px;
+	background-image: url(./assets/images/player3.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+}
+
+.yellow_goalkeeper_4 {
+	animation-name: goalkeeperPosition4;
+	animation-duration: 1s;
+
+	background: none;
+	width: 45px;
+	height: 100px;
+	position: relative;
+	top: 25px;
+	left: 380px;
+	right: 380px;
+	background-image: url(./assets/images/player3.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+}
+
+.yellow_goalkeeper_5 {
+	animation-name: goalkeeperPosition5;
+	animation-duration: 1s;
+
+	background: none;
+	width: 45px;
+	height: 100px;
+	position: relative;
+	top: 25px;
+	left: 380px;
+	right: 380px;
+	background-image: url(./assets/images/player3.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
+}
+
+.yellow_goalkeeper_6 {
+	animation-name: goalkeeperPosition6;
+	animation-duration: 1s;
+
+	background: none;
+	width: 45px;
+	height: 100px;
+	position: relative;
+	top: 25px;
+	left: 380px;
+	right: 380px;
+	background-image: url(./assets/images/player3.png);
+	background-size: 102%;
+	background-repeat: no-repeat;
 }

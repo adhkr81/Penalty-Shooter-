@@ -40,6 +40,8 @@ class Game {
 		this.kickCompare(this.roundsCounter);
 	}
 
+
+
 	kickCompare(round) {
 		if (round === 10) {
 			if (this.kick !== this.goalKeeperJump[round - 1]) {
