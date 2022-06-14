@@ -11,7 +11,7 @@ The main challenge with this assignment was creating and changing HTML structure
 
 ![PRINTSCREEN](https://user-images.githubusercontent.com/104802360/173673903-d801dec6-e031-497a-bd86-f6c4cdde16b0.jpg)
 
-### acknowledgments
+### Acknowledgments
 
 - Background art from "Super Goal! 2" (SNES) [link](https://spritedatabase.net/game/3029)
 - Characters sprites from "Ronaldinho Street Soccer 2007" (Mobile) [link](https://spritedatabase.net/game/1373)
