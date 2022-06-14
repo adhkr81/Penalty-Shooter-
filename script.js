@@ -27,6 +27,7 @@ startBtn.addEventListener("click", () => {
 			goalkeeperAnimations();
 			changeUniform();
 			checkStatus();
+			gameBtns();
 		});
 	}
 
@@ -50,6 +51,13 @@ startBtn.addEventListener("click", () => {
 		}, 1100);
 	}
 
+	function gameBtns() {
+		if (game.status === "nextlevel") {
+			gameGrid.setAttribute("class", "invisible");
+			gameBtn.setAttribute("class", "gameButton2 slide_right");
+			gameBtn.innerText = "YOU WON! PLAY NEXT STAGE";
+		}
+	}
 
 	function checkStatus() {
 		if (game.status === "tie") {
@@ -60,10 +68,6 @@ startBtn.addEventListener("click", () => {
 				gameBtn.setAttribute("class", "gameButton slide_right");
 				gameBtn.innerText = "GAME OVER COMPUTER WON";
 			}, 1700);
-		} else if (game.status === "nextlevel") {
-			gameGrid.setAttribute("class", "invisible");
-			gameBtn.setAttribute("class", "gameButton2 slide_right");
-			gameBtn.innerText = "YOU WON! PLAY NEXT STAGE";
 		}
 	}
 

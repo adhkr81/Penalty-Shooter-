@@ -636,8 +636,8 @@ div:hover.grid1 {
 	}
 
 	100% {
-		top: -10px;
-		left: 390px;
+		top: -120px;
+		left: 380px;
 	}
 }
 
@@ -660,7 +660,7 @@ div:hover.grid1 {
 	}
 
 	100% {
-		top: -50px;
+		top: -65px;
 		left: 270px;
 	}
 }
