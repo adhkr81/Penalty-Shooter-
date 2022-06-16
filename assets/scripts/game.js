@@ -10,6 +10,8 @@ class Game {
 
 		this.scorePrintPlayer = [];
 		this.scorePrintComputer = [];
+		this.printPlayer = printPlayer;
+		this.printComputer = printComputer;
 
 		this.level = 1;
 		this.status = "";
@@ -67,10 +69,12 @@ class Game {
 			this.message = `ROUND ${this.roundsCounter} - GOOOOOOOOOOOL ! Jogador chutou no ${this.kick} e Computador pulou no ${this.goalKeeperJump[this.roundsCounter - 1]}`;
 			this.playerScoreArray.push(true);
 			this.scorePrintPlayer.push("O");
+			// this.removePrintBug () COMENTARIO NA LINHA 121
 		} else if (this.kick === this.goalKeeperJump[round - 1] && round % 2 !== 0) {
 			this.message = `ROUND ${this.roundsCounter} - DEFEEESAAAA !`;
 			this.playerScoreArray.push(false);
 			this.scorePrintPlayer.push("X");
+			// this.removePrintBug () COMENTARIO NA LINHA 121
 
 			//ROUND PAR
 		} else if (this.kick !== this.goalKeeperJump[round - 1] && round % 2 === 0) {
@@ -91,10 +95,14 @@ class Game {
 		if (this.playerTotal > this.computerTotal) {
 			this.playerScoreArray = [];
 			this.computerScoreArray = [];
+			this.scorePrintPlayer = ["-"];
+			this.scorePrintComputer = ["-"];
+			this.goalKeeperJump = [];
+			this.roundsCounter = 1;
+			this.computerLevel1();
 			console.log("PLAYER WON!!!");
-			this.level = 2;
+			this.level += 1;
 			this.status = "nextlevel";
-			this.removeAllChild(this.parent);
 		} else if (this.playerTotal === this.computerTotal) {
 			console.log("EMPATOU");
 			this.roundsCounter = 8;
@@ -106,6 +114,14 @@ class Game {
 			this.status = "computerwon";
 		}
 	}
+
+	// TENTANDO COLOCAR "-" NA ARRAY MUDANCA DE FASE E DEPOIS APAGAR
+
+	// removePrintBug () {
+	// 	if (this.scorePrintComputer[0] === "-") {
+	// 		this.scorePrintComputer[0].shift()
+	// 	}
+	// }
 
 	removeAllChild(parent) {
 		while (parent.firstChild) {

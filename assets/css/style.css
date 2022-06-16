@@ -32,6 +32,42 @@
 	background-position-y: -140px;
 }
 
+.backgroundImage {
+	height: 480px;
+	width: 800px;
+	background-image: url(../../assets/images/Milan\ Stadium.png);
+	background-size: 330%;
+	background-position: center;
+	background-position-y: -140px;
+}
+
+.backgroundImage2 {
+	height: 480px;
+	width: 800px;
+	background-image: url(../../assets/images/Tokyo\ Stadium.png);
+	background-size: 330%;
+	background-position: center;
+	background-position-y: -140px;
+}
+
+.backgroundImage3 {
+	height: 480px;
+	width: 800px;
+	background-image: url(../../assets/images/Snowman\ Stadium.png);
+	background-size: 330%;
+	background-position: center;
+	background-position-y: -140px;
+}
+
+.backgroundImage4 {
+	height: 480px;
+	width: 800px;
+	background-image: url(../../assets/images/Rainbow\ Stadium.png);
+	background-size: 330%;
+	background-position: center;
+	background-position-y: -140px;
+}
+
 .gameGrid {
 	position: relative;
 	top: -342px;
@@ -173,7 +209,7 @@ div:hover.grid1 {
 	height: 100px;
 	top: 340px;
 	left: 330px;
-	background-image: url(./assets/images/player1.png);
+	background-image: url(../../assets/images/player1.png);
 	background-size: 120%;
 }
 
@@ -185,7 +221,7 @@ div:hover.grid1 {
 	position: relative;
 	top: 340px;
 	left: 330px;
-	background-image: url(./assets/images/comp1.png);
+	background-image: url(../../assets/images/comp1.png);
 	background-size: 120%;
 }
 
@@ -198,7 +234,7 @@ div:hover.grid1 {
 	top: 25px;
 	left: 380px;
 	right: 380px;
-	background-image: url(./assets/images/comp3.png);
+	background-image: url(../../assets/images/comp3.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 }
@@ -212,7 +248,7 @@ div:hover.grid1 {
 	top: 25px;
 	left: 380px;
 	right: 380px;
-	background-image: url(./assets/images/player3.png);
+	background-image: url(../../assets/images/player3.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 }
@@ -305,7 +341,7 @@ div:hover.grid1 {
 	height: 100px;
 	top: 340px;
 	left: 350px;
-	background-image: url(./assets/images/player2.png);
+	background-image: url(../../assets/images/player2.png);
 	background-size: 120%;
 }
 
@@ -317,7 +353,7 @@ div:hover.grid1 {
 	position: relative;
 	top: 340px;
 	left: 350px;
-	background-image: url(./assets/images/comp2.png);
+	background-image: url(../../assets/images/comp2.png);
 	background-size: 120%;
 }
 
@@ -335,7 +371,7 @@ div:hover.grid1 {
 	top: 25px;
 	left: 380px;
 	right: 380px;
-	background-image: url(./assets/images/comp3.png);
+	background-image: url(../../assets/images/comp3.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 }
@@ -351,7 +387,7 @@ div:hover.grid1 {
 	top: 25px;
 	left: 380px;
 	right: 380px;
-	background-image: url(./assets/images/comp3.png);
+	background-image: url(../../assets/images/comp3.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 }
@@ -367,7 +403,7 @@ div:hover.grid1 {
 	top: 25px;
 	left: 380px;
 	right: 380px;
-	background-image: url(./assets/images/comp3.png);
+	background-image: url(../../assets/images/comp3.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 }
@@ -383,7 +419,7 @@ div:hover.grid1 {
 	top: 25px;
 	left: 380px;
 	right: 380px;
-	background-image: url(./assets/images/comp3.png);
+	background-image: url(../../assets/images/comp3.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 }
@@ -399,7 +435,7 @@ div:hover.grid1 {
 	top: 25px;
 	left: 380px;
 	right: 380px;
-	background-image: url(./assets/images/comp3.png);
+	background-image: url(../../assets/images/comp3.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 }
@@ -415,7 +451,7 @@ div:hover.grid1 {
 	top: 25px;
 	left: 380px;
 	right: 380px;
-	background-image: url(./assets/images/comp3.png);
+	background-image: url(../../assets/images/comp3.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 }
@@ -432,7 +468,7 @@ div:hover.grid1 {
 	top: 25px;
 	left: 380px;
 	right: 380px;
-	background-image: url(./assets/images/player3.png);
+	background-image: url(../../assets/images/player3.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 }
@@ -448,7 +484,7 @@ div:hover.grid1 {
 	top: 25px;
 	left: 380px;
 	right: 380px;
-	background-image: url(./assets/images/player3.png);
+	background-image: url(../../assets/images/player3.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 }
@@ -464,7 +500,7 @@ div:hover.grid1 {
 	top: 25px;
 	left: 380px;
 	right: 380px;
-	background-image: url(./assets/images/player3.png);
+	background-image: url(../../assets/images/player3.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 }
@@ -480,7 +516,7 @@ div:hover.grid1 {
 	top: 25px;
 	left: 380px;
 	right: 380px;
-	background-image: url(./assets/images/player3.png);
+	background-image: url(../../assets/images/player3.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 }
@@ -496,7 +532,7 @@ div:hover.grid1 {
 	top: 25px;
 	left: 380px;
 	right: 380px;
-	background-image: url(./assets/images/player3.png);
+	background-image: url(../../assets/images/player3.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 }
@@ -512,7 +548,7 @@ div:hover.grid1 {
 	top: 25px;
 	left: 380px;
 	right: 380px;
-	background-image: url(./assets/images/player3.png);
+	background-image: url(../../assets/images/player3.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 }
@@ -522,7 +558,7 @@ div:hover.grid1 {
 .ball_original {
 	width: 30px;
 	height: 30px;
-	background-image: url(./assets/images/ball.png);
+	background-image: url(../../assets/images/ball.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 	position: relative;
@@ -536,7 +572,7 @@ div:hover.grid1 {
 	animation-duration: 1s;
 	width: 30px;
 	height: 30px;
-	background-image: url(./assets/images/ball.png);
+	background-image: url(../../assets/images/ball.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 	position: relative;
@@ -550,7 +586,7 @@ div:hover.grid1 {
 	animation-duration: 1s;
 	width: 30px;
 	height: 30px;
-	background-image: url(./assets/images/ball.png);
+	background-image: url(../../assets/images/ball.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 	position: relative;
@@ -564,7 +600,7 @@ div:hover.grid1 {
 	animation-duration: 1s;
 	width: 30px;
 	height: 30px;
-	background-image: url(./assets/images/ball.png);
+	background-image: url(../../assets/images/ball.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 	position: relative;
@@ -578,7 +614,7 @@ div:hover.grid1 {
 	animation-duration: 1s;
 	width: 30px;
 	height: 30px;
-	background-image: url(./assets/images/ball.png);
+	background-image: url(../../assets/images/ball.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 	position: relative;
@@ -592,7 +628,7 @@ div:hover.grid1 {
 	animation-duration: 1s;
 	width: 30px;
 	height: 30px;
-	background-image: url(./assets/images/ball.png);
+	background-image: url(../../assets/images/ball.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 	position: relative;
@@ -606,7 +642,7 @@ div:hover.grid1 {
 	animation-duration: 1s;
 	width: 30px;
 	height: 30px;
-	background-image: url(./assets/images/ball.png);
+	background-image: url(../../assets/images/ball.png);
 	background-size: 102%;
 	background-repeat: no-repeat;
 	position: relative;
