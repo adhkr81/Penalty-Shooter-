@@ -1,3 +1,4 @@
+
 ## Penalty Shooter Game 
 
 Simple game developed in Vanilla Javascript, HTML5 and CSS3, with most of the basic functionality dedicated in the game.js file, DOM manipulation are in the script.js, and style and animations can be found in styles.css.
@@ -6,6 +7,8 @@ Simple game developed in Vanilla Javascript, HTML5 and CSS3, with most of the ba
 
 This project is part of the Ironhack FullStack Web Development Bootcamp. For our first independent project, we were given the task of creating our own game using the knowledge acummulated during the first two weeks of the course.
 
+[Slides presentation](https://docs.google.com/presentation/d/e/2PACX-1vQ7s0HsTO-1eDX5xj1JPLVTVb_UXOTRGcmggHxUwnArINuS3D2Whj33m4DY6zy_zCcWFW3u4dYbbkuV/pub?start=true&loop=false&delayms=60000)
+
 
 ![PRINTSCREEN](https://user-images.githubusercontent.com/104802360/173673903-d801dec6-e031-497a-bd86-f6c4cdde16b0.jpg)
 
@@ -13,6 +16,8 @@ This project is part of the Ironhack FullStack Web Development Bootcamp. For our
 
 - Background art from "Super Goal! 2" (SNES) [link](https://spritedatabase.net/game/3029)
 - Characters sprites from "Ronaldinho Street Soccer 2007" (Mobile) [link](https://spritedatabase.net/game/1373)
+
+
 
 
 ----------------------------------------------------------------------------------------------------------------
@@ -33,3 +38,10 @@ Este projeto é parte do Bootcamp de Desenvolvimento Web FullStack da Ironhack. 
 - Characters sprites from "Ronaldinho Street Soccer 2007" (Mobile) [link](https://spritedatabase.net/game/1373)
 
 
+
+
+
+### acknowledgments
+
+- Background art from "Super Goal! 2" (SNES) [link](https://spritedatabase.net/game/3029)
+- Characters sprites from "Ronaldinho Street Soccer 2007" (Mobile) [link](https://spritedatabase.net/game/1373)
