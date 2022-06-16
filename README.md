@@ -2,7 +2,7 @@
 
 Simple game developed in Vanilla Javascript, HTML5 and CSS3, with most of the basic functionality dedicated in the game.js file, DOM manipulation are in the script.js, and style and animations can be found in styles.css.
 
-[Deployed link](https://adhkr81.github.io/Penalty-Shooter-/)
+[Live version](https://adhkr81.github.io/Penalty-Shooter-/)
 
 This project is part of the Ironhack FullStack Web Development Bootcamp. For our first independent project, we were given the task of creating our own game using the knowledge acummulated during the first two weeks of the course.
 
@@ -22,7 +22,7 @@ This project is part of the Ironhack FullStack Web Development Bootcamp. For our
 
 Jogo simples desenvolvido em Javascript Vanilla, HTML5 e CSS3, com a maioria da funcionalidade básica dedicada no arquivo game.js, manipulação de DOM estão em script.js, e estilos e animações estão em styles.css
 
-[Deployed link](https://adhkr81.github.io/Penalty-Shooter-/)
+[Live version](https://adhkr81.github.io/Penalty-Shooter-/)
 
 Este projeto é parte do Bootcamp de Desenvolvimento Web FullStack da Ironhack. Para nosso primeiro projeto independente, foi nos dado a tarefa de criar nosso próprio jogo autoral usando o conhecimento adquirido durante as duas primeiras semanas do curso.
 
