@@ -7,10 +7,11 @@ Simple game developed with DOM manipulation in plain Vanilla Javascript, HTML5 a
 
 This project is part of the Ironhack FullStack Web Development Bootcamp. For our first independent project, we were given the task of creating our own game using the knowledge acummulated during the first two weeks of the course.
 
-[Slides presentation](https://docs.google.com/presentation/d/e/2PACX-1vQ7s0HsTO-1eDX5xj1JPLVTVb_UXOTRGcmggHxUwnArINuS3D2Whj33m4DY6zy_zCcWFW3u4dYbbkuV/pub?start=true&loop=false&delayms=60000)
 
 
 ![PRINTSCREEN](https://user-images.githubusercontent.com/104802360/173673903-d801dec6-e031-497a-bd86-f6c4cdde16b0.jpg)
+
+
 
 ### Acknowledgments
 
