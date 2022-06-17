@@ -41,8 +41,3 @@ Este projeto é parte do Bootcamp de Desenvolvimento Web FullStack da Ironhack. 
 
 
 
-
-### acknowledgments
-
-- Background art from "Super Goal! 2" (SNES) [link](https://spritedatabase.net/game/3029)
-- Characters sprites from "Ronaldinho Street Soccer 2007" (Mobile) [link](https://spritedatabase.net/game/1373)
