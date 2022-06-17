@@ -103,6 +103,7 @@ class Game {
 			console.log("PLAYER WON!!!");
 			this.level += 1;
 			this.status = "nextlevel";
+			this.removeAllChild(this.parent);
 		} else if (this.playerTotal === this.computerTotal) {
 			console.log("EMPATOU");
 			this.roundsCounter = 8;
